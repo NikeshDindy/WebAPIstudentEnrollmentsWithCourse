@@ -20,7 +20,6 @@ namespace WebAPIstudentEnrollmentsWithCourse.Controllers
 
             if (student == null || course == null) return NotFound();
 
-            var enrollment = new Enrollment { StudentId = studentId, CourseId = courseId };
             _context.Enrollments.Add(enrollment);
             await _context.SaveChangesAsync();
 
